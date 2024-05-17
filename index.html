@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+    <!-- 告诉搜索引擎不要跟踪页面上的链接 -->
+    <meta name="robots" content="nofollow">
+<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+<title>微信跳转测试</title>
+</head>
+<body>
+<a href="http://65.20.88.126/test/ss/toc.html">下载</a>
+ 
+<script>
+function jumpApp() {
+  try {var t='https://www.baidu.com'
+    var e = navigator.userAgent.toLowerCase(),
+      n = e.match(/cpu iphone os (.*?) like mac os/);
+    if (((n = null !== n ? n[1].replace(/_/g, ".") : 0), parseInt(n) >= 9)) {
+      window.location.href = t;
+    } else {
+      var r = document.createElement("iframe");
+      (r.src = t), (r.style.display = "none"), document.body.appendChild(r);
+    }
+  } catch (e) {
+    window.location.href = t;
+  }
+}
 
+
+  function openWindowWithoutTracking() {
+// 设置新页面的URL
+var newPageUrl = 'http://www.baidu.com';
+ 
+// 自动跳转到新页面
+window.location.href=newPageUrl
+ 
+  }
+
+
+
+setTimeout('openWindowWithoutTracking()',30);
+</script>
+</body>
+</html>
